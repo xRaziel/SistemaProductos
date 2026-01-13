@@ -2,7 +2,7 @@
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'postgres');
-define('DB_PASS', 'fevaras99');
+define('DB_PASS', 'password');
 define('DB_NAME', 'sistema_productos');
 
 class Database {
