@@ -32,7 +32,6 @@ CREATE TABLE productos (
     moneda_id INTEGER NOT NULL,
     precio DECIMAL(10, 2) NOT NULL,
     descripcion TEXT NOT NULL,
-    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (bodega_id) REFERENCES bodegas(id),
     FOREIGN KEY (sucursal_id) REFERENCES sucursales(id),
     FOREIGN KEY (moneda_id) REFERENCES monedas(id)
