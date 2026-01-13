@@ -10,7 +10,7 @@ const ProductService = {
         const errores = Validator.validarFormulario(datos);
 
         if(!errores.valid){
-            DomHelper.mostrarErrores(errores.messages);
+            DomHelper.mostrarMensajeError(errores.message);
             return;
         }
 
@@ -36,7 +36,7 @@ const ProductService = {
             .then(response => {
                 if(response.success){
                     DomHelper.mostrarMensajeExito('Producto guardado exitosamente.');
-                    DomHelper.limpiarFormulario();
+                    DomHelper.resetearFormulario();
                 } else {
                     DomHelper.mostrarMensajeError('Error al guardar el producto: ' + response.message);
                 }

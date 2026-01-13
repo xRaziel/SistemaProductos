@@ -28,10 +28,20 @@ h1 {
     font-size: 28px;
 }
 
+.form-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
 /* Estilos del formulario */
 .form-group {
     margin-bottom: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
+
 
 label {
     display: block;
