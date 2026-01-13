@@ -34,6 +34,7 @@ const DomHelper = {
     limpiarSelect(selectId, textoDefault) {
         const select = document.getElementById(selectId);
         select.innerHTML = `<option value="">${textoDefault}</option>`;
+        select.value = '';
     },
     
 
@@ -45,6 +46,8 @@ const DomHelper = {
             const texto = formatoTexto ? formatoTexto(opcion) : opcion.nombre;
             select.appendChild(this.crearOption(opcion.id, texto));
         });
+
+        select.value = '';
     },
     
 
@@ -73,7 +76,7 @@ const DomHelper = {
 
     resetearFormulario() {
         document.getElementById('formProducto').reset();
-        this.limpiarSelect('sucursal', 'Seleccione una sucursal');
+        this.limpiarSelect('sucursal', '');
     },
     
 

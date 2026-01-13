@@ -10,6 +10,12 @@ const App = {
     },
 
     cargarApp(){
+         
+        DomHelper.limpiarSelect('bodega', '');
+        DomHelper.limpiarSelect('sucursal', '');
+        DomHelper.limpiarSelect('moneda', '');
+        document.getElementById('materiales-container').innerHTML = '';
+
         CatalogService.cargarBodegas();
         CatalogService.cargarMonedas();
         CatalogService.cargarMateriales();

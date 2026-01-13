@@ -8,7 +8,7 @@ const CatalogService = {
                 DomHelper.llenarSelect(
                     'bodega', 
                     data, 
-                    'Seleccione una bodega'
+                    ''
                 );
             })
             .catch(error => {
@@ -23,7 +23,7 @@ const CatalogService = {
                 DomHelper.llenarSelect(
                     'sucursal', 
                     data, 
-                    'Seleccione una sucursal'
+                    ''
                 );
             })
             .catch(error => {
@@ -33,7 +33,7 @@ const CatalogService = {
     },
 
     limpiarSucursales() {
-        DomHelper.limpiarSelect('sucursal', 'Seleccione una sucursal');
+        DomHelper.limpiarSelect('sucursal', '');
     },
 
     cargarMonedas() {
@@ -42,7 +42,7 @@ const CatalogService = {
                 DomHelper.llenarSelect(
                     'moneda', 
                     data, 
-                    'Seleccione una moneda',
+                    '',
                     (moneda) => `${moneda.codigo} - ${moneda.nombre}`
                 );
             })
